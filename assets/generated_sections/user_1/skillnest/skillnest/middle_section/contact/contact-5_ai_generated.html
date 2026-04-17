@@ -1,0 +1,55 @@
+<section class="section-wrapper contact-5">
+	<div class="container">
+		<div class="row">
+			<!-- Left Info -->
+			<div class="col-sm-5">
+				<div class="contact-info">
+					<small>CONNECT WITH US</small>
+					<h2>Reach Out Today!</h2>
+					<p>Our certified coaches are prepared to support your growth. Reach out to arrange a personalized session.</p>
+					<ul class="list-unstyled">
+						<li><i class="ri-map-pin-line"></i> <span class="client_address">785 15th Street, Suite 478, Berlin</span></li>
+						<li><i class="ri-phone-line"></i> <span class="contact-phone client_mobile">+1 840 841 25 69</span></li>
+						<li><i class="ri-mail-line"></i> <span class="client_email">info@email.com</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Right Form -->
+			<div class="col-sm-7">
+				<form method="POST" id="contact-form">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label><i class="ri-user-line"></i> Full Name</label>
+							<input type="text" class="form-control" placeholder="Name" name="name" required="">
+						</div>
+						<div class="col-sm-6 form-group">
+							<label><i class="ri-mail-line"></i> Email</label>
+							<input type="email" class="form-control" placeholder="Email" name="email" required="">
+						</div>
+						<div class="col-sm-12 form-group">
+							<label><i class="ri-edit-line"></i> Please share your coaching objectives or questions.</label>
+							<textarea class="form-control" placeholder="Message" name="message" rows="5" required=""></textarea>
+						</div>
+						<div class="col-sm-12">
+							<button type="button" onclick="sendEmailDataToGitHub()" class="btn btn-green"><i class="ri-send-plane-line"></i> Submit
+								Request</button>
+							<div class="checkbox form-check">
+								<label class="form-check-label">
+									<input type="checkbox"> I confirm that my information is <a href="#">processed and
+										retained</a>.
+								</label>
+							</div>
+						</div>
+						<!-- Form Message -->
+						<div class="col-12">
+							<div class="form-group">
+								<p class="form-message"></p>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
