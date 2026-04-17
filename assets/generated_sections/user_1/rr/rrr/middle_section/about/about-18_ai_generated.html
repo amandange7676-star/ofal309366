@@ -1,0 +1,67 @@
+<section class="section-wrapper about-18-section-wrapper">
+	<div class="container-fluid">
+		<div class="about-18-flex-wrapper">
+
+			<!-- Background Image Side -->
+			<div class="about-18-img-col" style="background: url('assets/images/about-18-1.jpg') center center no-repeat;
+"></div>
+
+			<!-- Text Content Side -->
+			<div class="about-18-text-col">
+				<div class="about-18-title">Discover</div>
+				<div class="about-18-subtitle">Accounting &amp; Advisory Services</div>
+				<div class="about-18-divider"></div>
+				<p class="about-18-description">
+					Accounting and financial advisory translate data into insight and bridge enterprises worldwide. Whether
+					you specialize in tax compliance, audit assurance, or strategic consulting—there is a platform ready
+					for your engagement.
+				</p>
+				<p class="about-18-description">
+					Engage in opportunities that foster precision and confidence and
+					discover seminars, workshops, and consultations that enhance fiscal resilience. Align expertise, perceive the impact, and let sound financial strategy guide your
+					progression.
+				</p>
+				<button class="about-18-btn">Learn More</button>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		gsap.registerPlugin(ScrollTrigger);
+
+		const section = document.querySelector('.about-18-section-wrapper');
+		const curtain = section.querySelector('.about-18-img-col::after'); // pseudo-element can't be directly selected
+
+		// Instead, use a wrapper div for curtain
+		const imgCol = section.querySelector('.about-18-img-col');
+		const curtainDiv = document.createElement('div');
+		curtainDiv.classList.add('curtain-overlay');
+		imgCol.appendChild(curtainDiv);
+
+		// CSS for the overlay
+		const style = document.createElement('style');
+		style.innerHTML = `
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+`;
+		document.head.appendChild(style);
+
+		// GSAP hover animation
+		section.addEventListener('mouseenter', () => {
+			gsap.to(curtainDiv, { x: '100%', duration: 1.2, ease: 'power2.out' });
+		});
+
+		section.addEventListener('mouseleave', () => {
+			gsap.to(curtainDiv, { x: '-100%', duration: 1.2, ease: 'power2.out' });
+		});
+
+	</script>
+</section>
